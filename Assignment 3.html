@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let names = ["Vidya", "Jitu", "Bhavin", "Dhiraj", "Archana"];
+
+        for(let i = names.length;i > 0;i--){
+            console.log(names[i-1]);
+        }
+        // console.log(i);  As i is let and let is block and this will result error
+        let country = [
+            {
+            name : "India",
+            population : 1500
+        },
+        {
+            name : "USA",
+            population : 1800
+        },
+        {
+            name : "Canada",
+            population : 2500
+        },
+        {
+            name : "Germany",
+            population : 2100
+        }
+    ];
+
+        for(let i=0;i < country.length;i++){
+            if(country[i].population <= 2000){
+                console.log(`Country having less than 2000 polpulation is: ${country[i].name}`);
+            }
+        }
+
+    </script>
+</body>
+</html>
