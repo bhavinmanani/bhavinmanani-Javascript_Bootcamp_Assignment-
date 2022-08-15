@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 Assignment</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 500px;
+            align-self: center;
+            background-color: rgb(238, 224, 224);
+            margin: 50px;
+            
+        }
+        .button{
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <button onclick="changecolor()">Click here to change color of div</button>
+    <button class="size" onclick="changesize()">Click here to change size of div</button>
+    <button onclick="addimg()">Click here to add image in div</button>
+    <button onclick="rmvimg()">Click here to remove image from div</button>
+    <script>
+        function changecolor(){
+            document.querySelector(".container").style.backgroundColor = "Green";
+        }
+        function changesize(){
+            if(document.querySelector(".size").innerText == "Click here to change size of div"){
+                document.querySelector(".container").style.height="300px";
+                document.querySelector(".container").style.width="300px";
+                document.querySelector(".size").innerText = "Click again to reset";
+            }
+            else{
+            document.querySelector(".container").style.height="500px";
+            document.querySelector(".container").style.width="500px";
+            document.querySelector(".size").innerText = "Click here to change size of div";
+            }
+        }
+        function addimg(){
+            let img = document.createElement("img");
+            img.src="OIP.jpg";
+            img.id="rmv";
+            document.querySelector(".container").appendChild(img);
+        }
+        function rmvimg(){
+            let rmv = document.getElementById("rmv");
+            rmv.remove();
+        }
+    </script>
+    
+</body>
+</html>
